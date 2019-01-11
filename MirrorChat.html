@@ -12,13 +12,6 @@
 	
 	<body background=mirrorchatbg.gif>
 	
-	<body>
-		<center>
-			<h1>MIRROR CHAT</h1>
-		
-		
-		</center>
-	</body>
 		
 		<script>
 		function showDiv() {
@@ -39,10 +32,27 @@
     height: 300px;
     background-color: #;
 }
+	
+#myProgress {
+  width: 100%;
+  background-color: #ddd;
+}
+
+#myBar {
+  width: 1%;
+  height: 30px;
+  background-color: #4CAF50;
+}
+	
 </style>
 </head>
   
 <body bgcolor="#FFD700">
+	
+	<center>
+			<h1>MIRROR CHAT</h1>
+		</center>
+	
 <div id="container">
     <video autoplay="true" id="videoElement">
      
@@ -60,39 +70,62 @@ if (navigator.mediaDevices.getUserMedia) {
     console.log("Something went wrong!");
   });
 }
+	
 </script>
 </body>
 
 <body>
 	<center>
-		<input type="checkbox" id="box"/>
-<label id="container" for="box">
-    <div id="button">Chat Now</div>
-    <div id="login">
-        
-        <input type="text" placeholder="Username"/>
-        
-        <div id="welcomeDiv"  style="display:none;" class="answer_list" >
-			
-			<font size="+5" color="blue">
-			You are now connected to someone somewhere right now.
-				</font>
-		
-		</div>
-<input type="button" name="answer" value="CONNECT"
-	   onclick="showDiv()" onclick="snd.play()"/>
-    </div>
+	
 </label>
+	
+	<h1><font face="arial";color="blue">CONNECT NOW</font></h1>
+
+<div id="myProgress">
+  <div id="myBar"></div>
+</div>
+
+<br>
+<button onclick="move()">PRESS TO CONNECT</button> 
 		<h1>price</h1>
 		<embed>
 		<img src="3999session.gif">
 			 </embed>
+	
+	<script>			
+var audio = new audio('mirrorchatconnect.mp3');
+	$('answer').click( () => audio.play() );
+		</script>
+	
+
+<script>
+function move() {
+  var elem = document.getElementById("myBar");   
+  var width = 1;
+  var id = setInterval(frame, 10);
+  function frame() {
+    if (width >= 100) {
+      clearInterval(id);
+    } else {
+      width++; 
+      elem.style.width = width + '%'; 
+    }
+  }
+}
+</script>	
+	
+	
+	
 	</center>
+
+
+	
+	<h2><A HREF = "https://anoriginalwebsitetolookatwhenyourerunningoutofwebcontent.com/index.html">go back to Homepage</A></h2>
 	
 </body>
 
 <script>
-    var snd = new Audio("mirrorchatconnect.wav"); 
+    var snd = new Audio("mirrorchatconnect.mp3"); 
 </script>
 
 

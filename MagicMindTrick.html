@@ -1,0 +1,46 @@
+<head>
+	
+<body bgcolor="#FF0004">
+<style>
+table, th, td {
+  border: 1px solid black;
+}
+</style>
+</head>
+<body>
+
+<table>
+  <tr>
+	  <th>Magic Mind Trick!      <dialog open> <p> The Magician </p>
+<img src="founder.jpg" width="150" height="250"> </dialog></th>
+
+  </tr>
+</table>
+	
+	   <div id="container">
+  <div>
+    <p><font size="2">"Pick a Number Between 1-10" He asks with a friendly smile.</p>
+    <p>
+<script>
+function clickCounter() {
+  if (typeof(Storage) !== "undefined") {
+    if (localStorage.clickcount) {
+      localStorage.clickcount = Number(localStorage.clickcount)+1;
+    } else {
+      localStorage.clickcount = 1;
+    }
+    document.getElementById("result").innerHTML = "My number is " + localStorage.clickcount ;
+  } else {
+    document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
+  }
+}
+</script>
+<div><p><button id=scaryButton onclick="clickCounter()" type="button"><font size="+100" face="impact
+	">pick your number</font></button></p>
+<div id="result"></div>
+	
+	<div>
+   
+
+<button type="button" onclick="alert(' He nods, and thanks you for picking a number. ')">Tell the Magician your answer</button>
+  </div>

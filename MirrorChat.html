@@ -10,10 +10,7 @@
   
 	<embed SRC="MirrorChatv01.mp3" autostart="true" loop="true" hidden="true"></embed>
 	
-	<body background=mirrorchatbg.gif>
-	
-		
-		<script>
+<script>
 		function showDiv() {
    document.getElementById('welcomeDiv').style.display = "block";
 }</script>
@@ -47,7 +44,8 @@
 </style>
 </head>
   
-<body bgcolor="#FFD700">
+	
+<body background=mirrorchatbg.gif>
 	
 	<center>
 			<h1>MIRROR CHAT</h1>
@@ -72,25 +70,59 @@ if (navigator.mediaDevices.getUserMedia) {
 }
 	
 </script>
-</body>
-
-<body>
-	<center>
 	
-</label>
-	
-	<h1><font face="arial";color="blue">CONNECT NOW</font></h1>
-
-<div id="myProgress">
+	<div id="myProgress">
   <div id="myBar"></div>
 </div>
-
+	
 <br>
-<button onclick="move()">PRESS TO CONNECT</button> 
+<center>
+	
+<h1 id="connector"><font face="arial";color="white">CONNECT NOW</font></h1>
+
+<button onClick="move()">Click Me!</button> 
+	
+	
 		<h1>price</h1>
 		<embed>
 		<img src="3999session.gif">
 			 </embed>
+	
+	</center>
+	
+	</body>
+	
+<script>
+	<script>
+function swapfunction() {
+  var x = document.getElementById("connector");
+  if (x.innerHTML === "CONNECT NOW") {
+    x.innerHTML = "YOU ARE NOW CONNECTED TO SOMEONE SOMEWHERE";
+  } else {
+    x.innerHTML = "CONNECT NOW";
+  }
+}
+</script>
+	</script>
+	
+<script>
+	<script>
+function move() {
+  var elem = document.getElementById("myBar");   
+  var width = 1;
+  var id = setInterval(frame, 10);
+  function frame() {
+    if (width >= 100) {
+      clearInterval(id);
+    } else {
+      width++; 
+      elem.style.width = width + '%'; 
+    }
+  }
+}
+</script>
+
+	</script>
 	
 	<script>			
 var audio = new audio('mirrorchatconnect.mp3');
@@ -115,12 +147,11 @@ function move() {
 </script>	
 	
 	
-	
-	</center>
 
 
+
 	
-	<h2><A HREF = "https://anoriginalwebsitetolookatwhenyourerunningoutofwebcontent.com/index.html">go back to Homepage</A></h2>
+	<h2><a href="https://anoriginalwebsitetolookatwhenyourerunningoutofwebcontent.com/index.html">go back to Homepage</A></h2>
 	
 </body>
 

@@ -1,0 +1,6 @@
+@charset "UTF-8";
+/* CSS Document */
+
+#box{display: none;}
+#container #login{ display: none;}
+#box:checked + #container #login{ display: block;}

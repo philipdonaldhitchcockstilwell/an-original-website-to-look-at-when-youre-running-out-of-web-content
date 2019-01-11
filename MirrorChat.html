@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<link rel="stylesheet" href="MirrorChatStyleSheet.css">
 <meta charset="utf-8">
 <meta content="stuff, to, help, search, engines, not" name="keywords">
 <meta content="Look At Yourself With Someone Else Looking At Themselves" name="description">
@@ -18,6 +19,11 @@
 		
 		</center>
 	</body>
+		
+		<script>
+		function showDiv() {
+   document.getElementById('welcomeDiv').style.display = "block";
+}</script>
 
 <style>
 
@@ -59,6 +65,24 @@ if (navigator.mediaDevices.getUserMedia) {
 
 <body>
 	<center>
+		<input type="checkbox" id="box"/>
+<label id="container" for="box">
+    <div id="button">Chat Now</div>
+    <div id="login">
+        
+        <input type="text" placeholder="Username"/>
+        
+        <div id="welcomeDiv"  style="display:none;" class="answer_list" >
+			
+			<font size="+5" color="blue">
+			You are now connected to someone somewhere right now.
+				</font>
+		
+		</div>
+<input type="button" name="answer" value="CONNECT"
+	   onclick="showDiv()" onclick="snd.play()"/>
+    </div>
+</label>
 		<h1>price</h1>
 		<embed>
 		<img src="3999session.gif">
@@ -66,6 +90,11 @@ if (navigator.mediaDevices.getUserMedia) {
 	</center>
 	
 </body>
+
+<script>
+    var snd = new Audio("mirrorchatconnect.wav"); 
+</script>
+
 
 <script>
 	var colour="random"; // "random" can be replaced with any valid colour ie: "red"...

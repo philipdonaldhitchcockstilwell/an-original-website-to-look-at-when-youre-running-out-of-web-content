@@ -1,0 +1,74 @@
+
+<HTML>
+
+<HEAD>
+
+<STYLE TYPE="text/css">
+
+  INPUT {font-family : Courier, Monospace}
+
+</STYLE>
+
+
+
+
+
+</HEAD>
+
+
+
+<BODY>
+
+<CENTER>
+  <h2>tell me a secret</h2>
+  <HR>
+
+
+
+<FORM NAME="generator">
+
+<TABLE>
+
+<TR>
+
+
+<TR>
+
+<TR>
+
+</TABLE>
+
+
+
+<P>
+
+<INPUT TYPE="button" VALUE="Vanquish your words under the veil, never to be seen again."
+
+       ONCLICK="document.generator.output.value = '';
+
+                for(i=1;i<=document.generator.numSeq.value;i=i+1) {
+
+                  document.generator.output.value += 
+
+                        generateRandSeq(document.generator.lenSeq.value,
+
+                                        document.generator.letters.value) + ' ';
+
+                };">
+
+
+
+<P>
+
+<TEXTAREA NAME="output" ROWS=20 COLS=60 WRAP VALUE=""></TEXTAREA>
+
+</FORM>
+
+</CENTER>
+
+
+
+</BODY>
+
+</HTML>
+
